@@ -1,0 +1,149 @@
+.adv-marking-info-banner {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 3px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #000;
+    font-family: Arial, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.adv-marking-info-banner .adv-marking-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.adv-marking-info-banner > .adv-marking-icon {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYuMDAwNzUgLTAuMDAwNDg4MjgxQzIuNjg3NzYgLTAuMDAwNDg4MjgxIDAgMi42ODYyNyAwIDUuOTk5NzZDMCA5LjMxMzc4IDIuNjg3NzggMTIuMDAwNSA2LjAwMDI1IDEyLjAwMDVDOS4zMTQ4IDEyLjAwMDUgMTIgOS4zMTM3OCAxMiA1Ljk5OTc2QzEyLjAwMDUgMi42ODU3NCA5LjMxNDc3IC0wLjAwMDQ4ODI4MSA2LjAwMDc1IC0wLjAwMDQ4ODI4MVpNNy4wNDUxOCAxMC4wOTY2SDQuOTU5OTVWNS4xMDIxMkg3LjA0NTE4VjEwLjA5NjZaTTYuMDAwNzUgNC4yMjg2OEM1LjM1ODU0IDQuMjI4NjggNC44MzczOCAzLjcwOTA0IDQuODM3MzggMy4wNjU4MUM0LjgzNzM4IDIuNDIzNiA1LjM1ODU3IDEuOTAxOTEgNi4wMDA3NSAxLjkwMTkxQzYuNjQzNDYgMS45MDE5MSA3LjE2MzYyIDIuNDIzNiA3LjE2MzYyIDMuMDY1ODFDNy4xNjMxMiAzLjcwOTA0IDYuNjQzNDkgNC4yMjg2OCA2LjAwMDc1IDQuMjI4NjhaIiBmaWxsPSIjMDEwMDAyIi8+Cjwvc3ZnPgo=");
+}
+
+.adv-marking-info-banner .adv-marking-popup {
+    display: none;
+    cursor: default;
+    position: absolute;
+    padding: 13px 22px;
+    width: 310px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.adv-marking-info-banner .adv-marking-popup::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transform: rotate(-45deg);
+    flex-shrink: 0;
+}
+
+.adv-marking-info-banner .adv-marking-popup .adv-marking-popup-close {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuOTQ3OTU0IDkuOTk0ODJDMC43MDI3ODEgMTAuMDA5MiAwLjQ2MTY2NCA5LjkyNjc5IDAuMjc1NDQ1IDkuNzY0ODVDLTAuMDkxODE1IDkuMzkxMSAtMC4wOTE4MTUgOC43ODc0OCAwLjI3NTQ0NSA4LjQxMzc0TDguMzE3MjMgMC4yNzgzNDZDOC42OTkyMSAtMC4wODMyNDc2IDkuMjk4NjEgLTAuMDYzMTQ2OSA5LjY1NjA0IDAuMzIzMjgxQzkuOTc5MjYgMC42NzI3MjUgOS45OTgxIDEuMjA5ODMgOS43MDAxNSAxLjU4MTU1TDEuNjEwOTggOS43NjQ4NUMxLjQyNzE2IDkuOTI0NDUgMS4xODk5MSAxMC4wMDY3IDAuOTQ3OTU0IDkuOTk0ODJaIiBmaWxsPSIjNDQ4QkIxIi8+CjxwYXRoIGQ9Ik04Ljk4MDMgOS45OTQ4M0M4LjczMTgzIDkuOTkzNzUgOC40OTM2NyA5Ljg5Mzk4IDguMzE3MjUgOS43MTY5NUwwLjI3NTQyOSAxLjU4MTUzQy0wLjA2NDgxNzggMS4xNzk1NyAtMC4wMTg1NTk0IDAuNTc0NjU1IDAuMzc4NzcgMC4yMzA0MThDMC43MzMzOTcgLTAuMDc2ODA1OCAxLjI1NjQgLTAuMDc2ODA1OCAxLjYxMSAwLjIzMDQxOEw5LjcwMDE2IDguMzY1ODFDMTAuMDgyMSA4LjcyNzUgMTAuMTAxOCA5LjMzMzkgOS43NDQyNyA5LjcyMDIzQzkuNzMwMDUgOS43MzU2IDkuNzE1MzUgOS43NTA0NiA5LjcwMDE2IDkuNzY0ODVDOS41MDIwOSA5LjkzOTEgOS4yNDE0MiAxMC4wMjI0IDguOTgwMyA5Ljk5NDgzWiIgZmlsbD0iIzQ0OEJCMSIvPgo8L3N2Zz4K");
+}
+
+.adv-marking-info-banner .adv-marking-popup .adv-marking-company,
+.adv-marking-info-banner .adv-marking-popup .adv-marking-link {
+    padding: 5px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #89898A;
+    font-family: Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.adv-marking-info-banner .adv-marking-popup .adv-marking-company > .adv-marking-icon {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjE3NSA1LjQzNzUyQzExLjE3NSA0LjU3NTAyIDEwLjU3NSAzLjgyNTAyIDkuNzUwMDEgMy42Mzc1MlYxLjY4NzUyQzkuNzUwMDEgMS4zNTAwMiA5LjQxMjUxIDEuMTI1MDIgOS4xMTI1MSAxLjIzNzUyTDUuMTM3NTEgMi42MjUwMkw0LjU3NTAxIDIuNzAwMDJWNy42ODc1Mkw1LjEzNzUxIDcuNzYyNTJMOS4xMTI1MSA5LjE1MDAyQzkuNDEyNTEgOS4yNjI1MiA5Ljc1MDAxIDkuMDM3NTIgOS43NTAwMSA4LjcwMDAyVjcuMjM3NTJDMTAuNTc1IDcuMDUwMDIgMTEuMTc1IDYuMzAwMDIgMTEuMTc1IDUuNDM3NTJaTTkuNzUwMDEgNi4yNjI1MlY0LjY1MDAyQzEwLjAxMjUgNC44MDAwMiAxMC4yMzc1IDUuMTAwMDIgMTAuMjM3NSA1LjQ3NTAyQzEwLjIzNzUgNS43NzUwMiAxMC4wNSA2LjA3NTAyIDkuNzUwMDEgNi4yNjI1MloiIGZpbGw9IiM0NDhCQjEiLz4KPHBhdGggZD0iTTQuOTg3NSA4LjcwMDA1SDQuOTVMMi4yNSA4LjM2MjU1TDIuNjI1IDkuOTAwMDVDMi43Mzc1IDEwLjMxMjUgMy4xMTI1IDEwLjYxMjUgMy41MjUgMTAuNjEyNUg0Ljc2MjVDNS4wNjI1IDEwLjYxMjUgNS4yODc1IDEwLjM1IDUuMjEyNSAxMC4wNUw0Ljk4NzUgOC43MDAwNVoiIGZpbGw9IiM0NDhCQjEiLz4KPHBhdGggZD0iTTMuNjc0OTkgMi44MTI1TDIuMDk5OTkgM0MxLjM4NzQ5IDMuMDc1IDAuODYyNDg4IDMuNjc1IDAuODYyNDg4IDQuMzg3NVY2QzAuODYyNDg4IDYuNzEyNSAxLjM4NzQ5IDcuMzEyNSAyLjA5OTk5IDcuMzg3NUwzLjY3NDk5IDcuNTc1VjIuODEyNVoiIGZpbGw9IiM0NDhCQjEiLz4KPC9zdmc+Cg==");
+}
+
+.adv-marking-info-banner .adv-marking-popup .adv-marking-link > .adv-marking-icon {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuMjczOTUgMUg0LjcyNjA1QzMuNzc0NCAxIDMgMS43NzQ0IDMgMi43MjYwNVYzSDIuNzI2MDVDMS43NzQ0IDMgMSAzLjc3NDQgMSA0LjcyNjA1VjkuMjczOUMxIDEwLjIyNTYgMS43NzQ0IDExIDIuNzI2MDUgMTFINy4yNzM5QzguMTQ4MTUgMTEgOC44NjUgMTAuMzQ0MSA4Ljk3NzEgOS41SDkuMjczOUMxMC4yMjU2IDkuNSAxMSA4LjcyNTYgMTEgNy43NzM5NVYyLjcyNjA1QzExIDEuNzc0NCAxMC4yMjU2IDEgOS4yNzM5NSAxWk0xMCA3Ljc3Mzk1QzEwIDguMTc0MyA5LjY3NDMgOC41IDkuMjczOTUgOC41SDlWNC43MjYwNUM5IDMuNzc0NCA4LjIyNTYgMyA3LjI3Mzk1IDNINFYyLjcyNjA1QzQgMi4zMjU3IDQuMzI1NyAyIDQuNzI2MDUgMkg5LjI3MzlDOS42NzQzIDIgMTAgMi4zMjU3IDEwIDIuNzI2MDVWNy43NzM5NVoiIGZpbGw9IiM0NDhCQjEiLz4KPC9zdmc+Cg==");
+}
+
+/* top-right */
+.adv-marking-info-banner.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.adv-marking-info-banner.top-right .adv-marking-popup {
+    top: 40px;
+    right: -5px;
+}
+
+.adv-marking-info-banner.top-right .adv-marking-popup::after {
+    top: -10px;
+    right: 36px;
+    background-image: linear-gradient(to right top, #ffffff00 50%, #ffffff 50%);
+}
+
+/* top-left */
+.adv-marking-info-banner.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.adv-marking-info-banner.top-left .adv-marking-popup {
+    top: 40px;
+    left: -5px;
+}
+
+.adv-marking-info-banner.top-left .adv-marking-popup::after {
+    top: -10px;
+    left: 36px;
+    background-image: linear-gradient(to right top, #ffffff00 50%, #ffffff 50%);
+}
+
+/* bottom-right */
+.adv-marking-info-banner.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+.adv-marking-info-banner.bottom-right .adv-marking-popup {
+    bottom: 40px;
+    right: -5px;
+}
+
+.adv-marking-info-banner.bottom-right .adv-marking-popup::after {
+    bottom: -10px;
+    right: 36px;
+    background-image: linear-gradient(to right top, #ffffff 50%, #ffffff00 50%);
+}
+
+/* bottom-left */
+.adv-marking-info-banner.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.adv-marking-info-banner.bottom-left .adv-marking-popup {
+    bottom: 40px;
+    left: -5px;
+}
+
+.adv-marking-info-banner.bottom-left .adv-marking-popup::after {
+    bottom: -10px;
+    left: 36px;
+    background-image: linear-gradient(to right top, #ffffff 50%, #ffffff00 50%);
+}
