@@ -3,7 +3,7 @@
     z-index: 1000;
     position: absolute;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.5);
+    background: #ffffff80;
     padding: 3px 8px;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,7 @@
 
 .adv-marking-info-banner .adv-marking-popup {
     display: none;
+    box-sizing: border-box;
     cursor: default;
     position: absolute;
     padding: 13px 22px;
@@ -35,8 +36,9 @@
     height: 80px;
     flex-shrink: 0;
     border-radius: 12px;
-    background: #FFF;
-    box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.10);
+    text-align: left;
+    background: #ffffff;
+    box-shadow: 3px 3px 20px 0 #0000001a;
 }
 
 .adv-marking-info-banner .adv-marking-popup::after {
@@ -70,6 +72,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.adv-marking-info-banner .adv-marking-popup .adv-marking-link a {
+    color: #578bb0;
+    text-decoration: none;
 }
 
 .adv-marking-info-banner .adv-marking-popup .adv-marking-company > .adv-marking-icon {
